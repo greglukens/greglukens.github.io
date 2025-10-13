@@ -3,20 +3,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} | {{ site.title }}</title>
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
-    /* tiny inline to ensure background loads even before CSS */
     :root { --hero-bg: url('{{ page.background | default: "/assets/img/lss.jpg" | relative_url }}'); }
   </style>
 </head>
 <body class="home">
   <main class="hero" role="main" style="--bg: var(--hero-bg);">
     <div class="hero-overlay"></div>
-
     <div class="hero-inner">
       <div class="hero-divider"></div>
       <h1 class="hero-title">{{ page.title | escape }}</h1>
@@ -25,18 +23,14 @@
       <img class="hero-headshot" src="{{ page.headshot | relative_url }}" alt="{{ page.title }} headshot">
       {% endif %}
 
-      {% if page.subtitle %}
-      <p class="hero-subtitle">{{ page.subtitle }}</p>
-      {% endif %}
+      {% if page.subtitle %}<p class="hero-subtitle">{{ page.subtitle }}</p>{% endif %}
 
       {% if page.cta_text and page.cta_link %}
-      <p class="hero-cta">
-        <a class="btn btn-outline" href="{{ page.cta_link | relative_url }}">{{ page.cta_text }}</a>
-      </p>
+      <p class="hero-cta"><a class="btn btn-outline" href="{{ page.cta_link | relative_url }}">{{ page.cta_text }}</a></p>
       {% endif %}
 
       <nav class="hero-nav">
-        <a href="{{ '/' | relative_url }}">About me</a>
+        <a href="{{ '/about/' | relative_url }}">About me</a>
         <a href="{{ '/research/' | relative_url }}">Research</a>
         <a href="{{ '/publications/' | relative_url }}">Publications</a>
         <a href="{{ '/blog/' | relative_url }}">Notes</a>
@@ -45,8 +39,6 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <p>Hosted on GitHub Pages — {{ site.title }}</p>
-  </footer>
+  <footer class="site-footer"><p>Hosted on GitHub Pages — {{ site.title }}</p></footer>
 </body>
 </html>
