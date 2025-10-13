@@ -1,10 +1,8 @@
 title: Greg Lukens
 description: Bookmark this to keep an eye on my project updates!
-url: "https://greglukens.github.io"
-baseurl: ""   # keep empty for user/organization site
 author:
   name: Greg Lukens
-  email: your.email@university.edu
+  email: gql5196@psu.edu
 
 # Built-in Pages-safe plugins
 plugins:
