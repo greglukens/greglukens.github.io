@@ -1,7 +1,14 @@
 ---
 layout: default
 ---
-<main class="page-content" role="main" style="margin: 2rem auto; max-width: 900px; padding: 0 1rem;">
-  {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
-  {{ content }}
+<!-- Fixed background for all subpages -->
+<div class="bg-fixed" style="--bg: url('{{ page.background | default: "/assets/img/lss.jpg" | relative_url }}');"></div>
+<div class="bg-dim"></div>
+
+<!-- Centered card in front of the background -->
+<main class="sheet" role="main">
+  <article class="glass-card pop-in">
+    {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+    {{ content }}
+  </article>
 </main>
