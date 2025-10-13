@@ -137,3 +137,38 @@ html, body { height: 100%; }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+
+/* Ensure body doesn't paint white over our background */
+body.subpage { margin: 0; background: #000; }
+
+/* Put background layers ABOVE the body background, BELOW content */
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 0;                     /* was negative — change to 0 */
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-dim {
+  position: fixed;
+  inset: 0;
+  z-index: 1;                     /* sits above the image, below content */
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.20) 0%, rgba(0,0,0,.55) 100%);
+  backdrop-filter: blur(2px);
+}
+
+.sheet { 
+  position: relative; 
+  z-index: 2;                     /* content above both bg layers */
+  min-height: 100vh; 
+  display: grid; 
+  place-items: center; 
+  padding: clamp(2rem, 4vw, 4rem) 1rem;
+}
+@supports (min-height: 100svh) { .sheet { min-height: 100svh; } }
+
+
