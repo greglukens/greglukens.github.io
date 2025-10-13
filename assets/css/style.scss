@@ -244,4 +244,14 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
   .bg-credit { font-size: 10px; right: 10px; bottom: 8px; }
 }
 
+.glass-card :is(strong, b, em, i, u),
+.hero-inner :is(strong, b, em, i, u),
+.markdown-body :is(strong, b, em, i, u) {
+  color: #fff !important;
+}
+*/
+
+/* Optional: make links readable on dark background */
+.glass-card a { color: #e6f1ff; }
+.glass-card a:hover { color: #ffffff; }
 
