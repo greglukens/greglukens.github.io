@@ -77,3 +77,63 @@ body.home { margin: 0; padding: 0; background: #000; }
 }
 
 body.home .site-footer { display: none; }
+
+
+/* ---------- Global reset for subpages ---------- */
+html, body { height: 100%; }
+* { box-sizing: border-box; }
+
+/* Minimal theme wrapper can constrain width; neutralize it */
+.wrapper { max-width: none; padding: 0; margin: 0; background: transparent; }
+
+/* ---------- Full-bleed background on all subpages ---------- */
+.bg-fixed {
+  position: fixed; inset: 0; z-index: -2;
+  background-image: var(--bg);
+  background-size: cover;         /* crop, don’t stretch */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.bg-dim {
+  position: fixed; inset: 0; z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.20) 0%, rgba(0,0,0,.55) 100%);
+  backdrop-filter: blur(2px);
+}
+
+/* ---------- Centered “glass” card ---------- */
+.sheet {
+  min-height: 100vh;           /* fallback */
+  padding: clamp(2rem, 4vw, 4rem) 1rem;
+  display: grid; place-items: center;
+}
+@supports (min-height: 100svh) { .sheet { min-height: 100svh; } }
+
+.glass-card {
+  width: min(900px, 92vw);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 14px;
+  background: rgba(12, 12, 16, 0.55);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #f2f3f5;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+}
+
+/* Page title look */
+.page-title {
+  color: #fff;
+  margin: 0 0 .75rem 0;
+  text-shadow: 0 3px 16px rgba(0,0,0,.45);
+}
+
+/* ---------- Entry transition ---------- */
+.pop-in {
+  opacity: 0;
+  transform: translateY(14px) scale(.995);
+  animation: popIn .42s ease-out .02s forwards;
+}
+@keyframes popIn {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
