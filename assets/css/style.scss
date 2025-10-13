@@ -224,7 +224,8 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 .bg-credit {
   position: absolute;
   bottom: 10px;
-  right: 12px;                  /* use left: 12px; if you prefer left side */
+  left: 50%;
+  transform: translateX(-50%);          
   font-size: 11px;
   line-height: 1;
   color: rgba(255,255,255,0.7);
