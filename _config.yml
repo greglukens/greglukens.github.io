@@ -10,12 +10,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Collections (optional later)
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
-
 # Navigation (we'll define labels in _data/navigation.yml)
 nav: true
 
