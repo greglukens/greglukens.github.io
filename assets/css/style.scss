@@ -55,3 +55,23 @@ body.home { margin: 0; }
 @media (max-width: 520px) {
   .hero-overlay { background: rgba(0,0,0,.62); }
 }
+
+/* Full-bleed hero + no gutters */
+html, body { height: 100%; }
+body.home { margin: 0; padding: 0; background: #000; }
+* { box-sizing: border-box; }
+
+/* Ensure the background fills the entire viewport and crops as needed */
+.hero {
+  width: 100vw;
+  min-height: 100vh;        /* fallback */
+  margin: 0;
+  background-size: cover;   /* crop instead of stretch */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* mobile-safe viewport units */
+@supports (height: 100svh) {
+  .hero { min-height: 100svh; }
+}
+
