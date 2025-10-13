@@ -171,4 +171,20 @@ body.subpage { margin: 0; background: #000; }
 }
 @supports (min-height: 100svh) { .sheet { min-height: 100svh; } }
 
+/* Make bold / italic / underlined text white everywhere */
+strong, b,
+em, i,
+u { color: #fff !important; }
+
+/* If something uses an underline style, make the underline itself white too */
+u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
+
+/* (Optional) only scope to visible content areas */
+.hero-inner strong, .hero-inner em, .hero-inner u,
+.glass-card strong, .glass-card em, .glass-card u {
+  color: #fff !important;
+}
+.hero-inner u, .glass-card u {
+  text-decoration-color: rgba(255,255,255,0.95);
+}
 
