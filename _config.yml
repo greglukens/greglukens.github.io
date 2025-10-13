@@ -1,5 +1,10 @@
 title: Greg Lukens
 description: Bookmark this to keep an eye on my project updates!
+url: "https://greglukens.github.io"
+baseurl: ""
+theme: jekyll-theme-minimal
+sass:
+  style: compressed
 author:
   name: Greg Lukens
   email: gql5196@psu.edu
@@ -20,7 +25,6 @@ kramdown:
   math_engine: mathjax
   hard_wrap: false
 
-theme: jekyll-theme-minimal
 
 # Social preview (optional)
 logo: /assets/img/headshot.jpg
