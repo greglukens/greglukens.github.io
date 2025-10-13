@@ -226,18 +226,18 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);          
+  z-index: 2;                   /* above overlay & content */
   font-size: 11px;
   line-height: 1;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.72);
   text-shadow: 0 1px 8px rgba(0,0,0,0.65);
-  opacity: 0.85;
-  pointer-events: auto;         /* keep link clickable */
+  opacity: 0.9;
 }
 
 .bg-credit a {
-  color: inherit;               /* stays light */
+  color: inherit;               /* same color as "Photo:" */
   text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,0.7);
+  text-decoration-color: currentColor;
 }
 
 @media (max-width: 520px) {
@@ -254,4 +254,9 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 /* Optional: make links readable on dark background */
 .glass-card a { color: #e6f1ff; }
 .glass-card a:hover { color: #ffffff; }
+
+/* Keep overlay under interactive elements */
+.hero-overlay { z-index: 0; pointer-events: none; }
+.hero-inner   { z-index: 1; }
+
 
