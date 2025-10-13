@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://greglukens.github.io/sitemap.xml
