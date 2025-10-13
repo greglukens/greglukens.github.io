@@ -188,3 +188,36 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
   text-decoration-color: rgba(255,255,255,0.95);
 }
 
+
+/* Home (hero) subtitle */
+.hero-subtitle {
+  color: #f2f6ff;         /* light white-blue */
+  opacity: .96;
+  text-shadow: 0 2px 14px rgba(0,0,0,.45);
+}
+
+/* Subpages: treat H2/H3/H4 as subtitles (lighter text) */
+.glass-card h2,
+.glass-card h3,
+.glass-card h4 {
+  color: #eef3ff;         /* light/white */
+  font-weight: 600;
+}
+
+/* If you ever use a manual subtitle paragraph */
+.glass-card .subtitle {
+  color: #eef3ff;
+  font-size: 1.05em;
+  opacity: .98;
+}
+
+/* Make links inside headings follow the light color */
+.glass-card h1 a,
+.glass-card h2 a,
+.glass-card h3 a,
+.glass-card h4 a {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
+
