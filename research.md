@@ -88,7 +88,7 @@ In an effort to streamline this calculation, one of my projects has been to buil
 \\[w_{\ell,jj'}^p(r,r') = \frac{2}{\pi}\int dk\,k^{2+p} P(k) j_\ell^{(j)}(kr) j_\ell^{(j')}(kr')\,, \\]
 for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic expression requires $$j,j' = 1$$ and integration of $$w_{\ell,jj'}$$ over the line-of-sight. Therefore, we have created [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which is the full relativistic extension/add-on of the 2-FAST algorithm.
 
-<figure class="fig shadow-soft border-hairline zoom lightbox">
+<figure class="fig shadow-soft lightbox">
   <img src="{{ '/assets/img/cl_ell2_grid.png' | relative_url }}" alt="cl_mosaic" data-caption="Cl_ell2">
   <figcaption>Figure 1. Testing caption.</figcaption>
 </figure>
