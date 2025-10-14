@@ -27,11 +27,12 @@ where $$k$$ is the Fourier wavenumber (you can think of it as inversely proporti
 
 Due to this signal being prevalent at large scales (i.e., approaching a gigaparsec), new galaxy surveys have aimed to observe galaxies across unprecedented amounts of survey volume in hopes of constraining primordial non-Gaussianity to high precision. One such survey, [SPHEREx](https://science.nasa.gov/mission/spherex/), which just launched in early 2025, has a stated goal of $$\mathcal O(1)$$ precision on $$f_\mathrm{NL}$$. However, in order to achieve this, it will have to account for some significant observational challenges.
 
-- **Problem 1**: You need a large survey volume to constrain $$f_\mathrm{NL}$$ to statistical significant levels.
-  - *Solution*: Observe galaxies across the full sky and to redshifts deep enough to measure galaxy pair separations greater than 1 Gpc.
-- **Problem 2**: On the full sky, you need to properly handle redshift-space distortions (i.e., the plane-parallel approximation fails).
+- **Problem 1**: A large survey volume is required to constrain $$f_\mathrm{NL}$$ to statistical significant levels.
+  - *Solution*: SPHEREx will observe galaxies across the full sky and to redshifts deep enough to measure galaxy pair separations greater than 1 Gpc.
+- **Problem 2**: On the full sky, proper treatment of redshift-space distortions is necessary.
   - *Solution*: Redshift-space distoritions arise from the degenerate combination of the redshift from the expansion of the universe (the one you want to measure) and the Doppler shift from the peculiar velocity of galaxies. The latter is directly coupled to the underlying matter field, so you cannot ignore it. Typically, it is modeled in Fourier space, which relies on the plane-wave basis ($$e^{i\boldsymbol k \cdot \boldsymbol x}$$) of the Fourier transform, which works when your survey covers a small fraction of the sky; you can reasonably approximate the line-of-sight direction to every galaxy as the same (i.e., the plane-parallel approximation). This basis and flat-sky assumption breaks down in the full sky regime; you must move to the spherical Fourier-Bessel (SFB) basis, which uses spherical Bessel functions, $$j_\ell(kr)$$, and spherical harmonics, $$Y_\ell(\hat {\boldsymbol n} )$$, to parameterize your survey volume.
-- **Problem 3**:   
+- **Problem 3**: At large survey volumes and redshift, general relativistic effects must be taken into account.
+  - *Solution*: Add the Doppler term ($$\propto v_p$$), Sachs-Wolfe, integrated Sachs-Wolfe, Shapiro time-delay, and gravitational lensing terms to the traditional galaxy bias and redshift-space distortion terms present in the observed density contrast. While computationally expensive, this will allow you to forward model the effects present in the observations of galaxies across such a large survey volume. 
 
 
 
