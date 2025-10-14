@@ -32,7 +32,10 @@ Due to this signal being prevalent at large scales (i.e., approaching a gigapars
 - **Problem 2**: On the full sky, proper treatment of redshift-space distortions is necessary.
   - *Solution*: Redshift-space distoritions (RSDs) arise from the degenerate combination of the redshift from the expansion of the universe (the one you want to measure) and the Doppler shift from the peculiar velocity of galaxies. The latter is directly coupled to the underlying matter field, so you cannot ignore it. Typically, it is modeled in Fourier space, which relies on the plane-wave basis ($$e^{i\boldsymbol k \cdot \boldsymbol x}$$) of the Fourier transform, which works when your survey covers a small fraction of the sky; you can reasonably approximate the line-of-sight direction to every galaxy as the same (i.e., the plane-parallel approximation). This basis and flat-sky assumption breaks down in the full sky regime; you must move to the spherical Fourier-Bessel (SFB) basis, which uses spherical Bessel functions, $$j_\ell(kr)$$, and spherical harmonics, $$Y_\ell(\hat {\boldsymbol n} )$$, to parameterize your survey volume.
 - **Problem 3**: At large survey volumes and redshift, general relativistic effects must be taken into account.
-  - *Solution*: Add the Doppler ($$\propto v_p$$), potential, integrated Sachs-Wolfe, Shapiro time-delay, and gravitational lensing terms to the traditional galaxy bias and redshift-space distortion terms present in the observed density contrast. While computationally expensive, this will allow you to forward model the effects present in the observations of galaxies across such a large survey volume. 
+  - *Solution*: Add the Doppler ($$\propto v_p$$), potential, integrated Sachs-Wolfe, Shapiro time-delay, and gravitational lensing terms to the traditional galaxy bias and redshift-space distortion terms present in the observed density contrast. While computationally expensive, this will allow you to forward model the effects present in the observations of galaxies across such a large survey volume.
+
+
+With these in mind, we can write out the full general relativistic expression, where
 {% raw %}
 $$
 \begin{aligned}
@@ -59,6 +62,25 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+where we now have defined the effective bias, $$b_e$$, and once again we see the magnification bias, $$\mathcal Q$$, which are both given via
+\\[b_e = \frac{\mathrm{d} \ln (a^3 \bar n_g)}{\mathrm{d} \ln a} \qquad \quad \mathcal Q = -\frac{\mathrm{d} \ln \bar n_g( > L_\text{min},z) }{\mathrm{d} \ln L_\text{min}}\,.\\]
+Here, we see that $$L_\text{min}$$ is the limiting luminosity of a magnitude-limited survey. Lastly, we revisit the $$\mathcal I$$ expressions, which are given as
+{% raw %}
+$$
+\begin{aligned}
+  \mathcal{I}_\mathrm{ISW}(k,r) = &\, 3\int _0^r dr' \frac{a^3(r')H^3(r')\Omega_m(r')[f(r')-1]}{k^2} \frac{D(r')}{D(r)} j_{\ell}(kr')\,,
+\\[4pt]
+\label{eq:I_td}
+    \mathcal{I}_\mathrm{TD}(k,r) = &\,3\int _0^r dr' \frac{a^2(r')H^2(r')\Omega_m(r')}{k^2} \frac{D(r')}{D(r)} j_{\ell}(kr')\,,
+\\[4pt]
+\label{eq:I_kappa} 
+    \mathcal{I}_\mathrm{\kappa}(k,r) = &\, \frac{3}{2}\ell(\ell+1)\int _0^r dr'\frac{r-r'}{rr'} \frac{a^2(r')H^2(r')\Omega_m(r')}{k^2}\frac{D(r')}{D(r)} j_{\ell}(kr')
+\end{aligned}
+$$
+{% endraw %}
+
+
+
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
 
