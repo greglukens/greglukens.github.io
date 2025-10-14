@@ -292,4 +292,85 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 /* Make any “clickable for lightbox” image show a hint cursor */
 .lb, .lightbox img { cursor: zoom-in; }
 
+/* Base figure */
+.fig { margin: 1rem auto 1.25rem; text-align: center; }
+.fig img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+
+/* Subtle rounded corners + soft shadow (great default) */
+.shadow-soft img {
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.35);
+}
+
+/* Hairline border to separate from dark bg */
+.border-hairline img {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+}
+
+/* Glow (nice for nebula/space shots) */
+.glow img {
+  border-radius: 12px;
+  box-shadow:
+    0 6px 22px rgba(0,0,0,.45),
+    0 0 40px rgba(255,255,255,.06);
+}
+
+/* Framed variant with inner padding (“gallery” look) */
+.frame {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 14px 42px rgba(0,0,0,.35);
+}
+
+/* “Polaroid” card with caption inside */
+.polaroid {
+  display: inline-block;
+  background: rgba(12,12,16,.65);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+  padding: 8px 8px 14px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.4);
+}
+.polaroid figcaption { margin-top: 8px; opacity: .95; }
+
+/* Hover zoom (gentle) */
+.zoom:hover img { transform: scale(1.015); }
+.zoom img { transition: transform .25s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .zoom img { transition: none; }
+}
+
+/* Tilt on hover (playful, keep subtle) */
+.tilt:hover img { transform: perspective(800px) rotateX(1.2deg) rotateY(-1.2deg) scale(1.01); }
+.tilt img { transition: transform .25s ease; }
+
+/* Caption styling */
+.fig figcaption {
+  margin-top: .5rem;
+  color: #eef3ff;
+  opacity: .9;
+  font-size: .95em;
+}
+.caption-small figcaption { font-size: .88em; opacity: .92; }
+.caption-muted figcaption { opacity: .75; }
+
+/* Credit badge (bottom-right overlay) */
+.fig .credit {
+  position: absolute; right: 10px; bottom: 10px;
+  font-size: 11px; line-height: 1;
+  color: rgba(255,255,255,.72);
+  text-shadow: 0 1px 8px rgba(0,0,0,.65);
+}
+.fig .credit a { color: inherit; text-decoration: underline; text-decoration-color: currentColor; }
+
+/* Utility helpers */
+.rounded img { border-radius: 16px; }
+.rounded-xl img { border-radius: 20px; }
+.center { display: block; margin-left: auto; margin-right: auto; }
+.max-800 img { max-width: 800px; }
+
+
 
