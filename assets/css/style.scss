@@ -372,5 +372,29 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 .center { display: block; margin-left: auto; margin-right: auto; }
 .max-800 img { max-width: 800px; }
 
+/* Lightbox: rounded corners + click-to-zoom */
+.lightbox-img {
+  border-radius: 10px;          /* slight rounding */
+  transform: scale(.96);
+  transition: transform .18s ease;
+  cursor: zoom-in;              /* hint */
+}
+
+.is-open .lightbox-img { transform: scale(1); }
+
+/* When zoomed: bigger scale + allow panning via scrollbars */
+.lightbox-backdrop.is-zoomed .lightbox-img {
+  transform: scale(1.75);       /* adjust to taste */
+  cursor: zoom-out;
+}
+
+/* Let you pan when zoomed */
+.lightbox-wrap { overflow: hidden; }
+.lightbox-backdrop.is-zoomed .lightbox-wrap { overflow: auto; }
+
+/* Optional: hide caption while zoomed for max space */
+.lightbox-backdrop.is-zoomed .lightbox-caption { display: none; }
+
+
 
 
