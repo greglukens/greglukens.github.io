@@ -90,8 +90,9 @@ for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic e
 
 <figure class="fig shadow-soft lightbox">
   <img src="{{ '/assets/img/cl_ell2_grid.png' | relative_url }}" alt="cl_mosaic" data-caption="Cl_ell2">
-  <figcaption>_Each component of the full relativistic angular power spectrum at the quadrupole moment. Here, PNG is primordial non-Gaussianity._</figcaption>
+  <figcaption><em>Each component of the full relativistic angular power spectrum at the quadrupole moment. Here, PNG is primordial non-Gaussianity.</em></figcaption>
 </figure>
+
 
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
