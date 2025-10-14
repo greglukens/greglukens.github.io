@@ -40,10 +40,10 @@ F_\ell(k,r)\; &=\;
 \underbrace{b_1(r)\, j_\ell(kr)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{real space}}
 - \underbrace{f\, j''_\ell(kr)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{RSD}}
 + \underbrace{aH\, \mathcal{B}\, \dfrac{j'_\ell(kr)}{k}\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{Doppler}}
-\\[4pt]
-&\quad
 + \underbrace{a^2 H^2\, \mathcal{A}\, \dfrac{j_\ell(kr)}{k^2}\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{potential}}
 + \underbrace{\dfrac{\mathcal{B}}{f}\, \mathcal{I}_{\mathrm{ISW}}(k,r)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{ISW}}
++ \\[4pt]
+&\quad
 - \underbrace{2(1-\mathcal{Q})\, \mathcal{I}_{\mathrm{TD}}(k,r)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{time-delay}}
 - \underbrace{2(1-\mathcal{Q})\, \mathcal{I}_\kappa(k,r)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{lensing}} \,.
 \end{aligned}
