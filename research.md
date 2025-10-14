@@ -84,6 +84,9 @@ Finally, the full relativistic angular galaxy power spectrum, to linear order, i
 \\[C_\ell(r,r') = D(r) D(r') \frac{2}{\pi} \int dk \, k^2 P(k) F_\ell(k,r) F_\ell(k,r')\,, \\]
 where $$P(k) = \left<\delta_m(k) \delta_m(k')\right>$$ is the matter power spectrum. Therefore, taking into account all relativistic effects and primordial non-Gaussianity, each $$F_\ell$$ has 8 terms, so the angular power spectrum will have **64 terms**! Add in the fact that each term contains *two* spherical Bessel functions integrated over $$k$$, as well as some terms additionally integrated over $$r$$, and it becomes clear that the computational demands to model this full expression quickly build up.
 
+In an effort to streamline this calculation, one of my projects has been to build upon the already-efficient [2-FAST](https://github.com/hsgg/TwoFAST.jl) (*2*-point function from *F*ast and *A*ccurate *S*pherical bessel *T*ransform), which swiftly computes integrals of the form
+\\[w_{\ell,jj'}^p(r,r') = \frac{2}{\pi}\int dk\,k^{2+p} P(k) j_\ell^{(j)}(kr) j_\ell^{(j')}(kr')\,, \\]
+for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic expression requires $$j,j' = 1$$ and to integrate $$w_{\ell,jj'}$$ over the line-of-sight. Therefore, we have created [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which is the full relativistic extension/add-on of the 2-FAST algorithm.
 
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
