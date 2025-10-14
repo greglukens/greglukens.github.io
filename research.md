@@ -88,6 +88,8 @@ In an effort to streamline this calculation, one of my projects has been to buil
 \\[w_{\ell,jj'}^p(r,r') = \frac{2}{\pi}\int dk\,k^{2+p} P(k) j_\ell^{(j)}(kr) j_\ell^{(j')}(kr')\,, \\]
 for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic expression requires $$j,j' = 1$$ and integration of $$w_{\ell,jj'}$$ over the line-of-sight. Therefore, we have created [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which is the full relativistic extension/add-on of the 2-FAST algorithm.
 
+[![Cl_collage]({{ '/assets/img/cl_ell2_grid.png' | relative_url }})]({{ '/assets/img/cl_ell2_grid.png' | relative_url }})
+
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
 
