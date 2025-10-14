@@ -82,7 +82,7 @@ $$
 
 Finally, the full relativistic angular galaxy power spectrum, to linear order, is given as
 \\[C_\ell(r,r') = D(r) D(r') \frac{2}{\pi} \int dk \, k^2 P(k) F_\ell(k,r) F_\ell(k,r')\,, \\]
-where $$P(k) = \left<\delta_m(k) \delta_m(k')\right>$$ is the matter power spectrum. Therefore, taking into account all relativistic effects and primordial non-Gaussianity, each $$F_\ell$$ has 8 terms, so the angular power spectrum will have **64 terms**!
+where $$P(k) = \left<\delta_m(k) \delta_m(k')\right>$$ is the matter power spectrum. Therefore, taking into account all relativistic effects and primordial non-Gaussianity, each $$F_\ell$$ has 8 terms, so the angular power spectrum will have **64 terms**! Add in the fact that each term contains *two* spherical Bessel functions integrated over $$k$$, as well as some terms additionally integrated over $$r$$, the computational demands to compute this full expression quickly build up.
 
 
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
