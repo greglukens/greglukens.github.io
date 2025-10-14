@@ -63,7 +63,7 @@ $$
 $$
 {% endraw %}
 where we now have defined the effective bias, $$b_e$$, and once again we see the magnification bias, $$\mathcal Q$$, which are both given via
-\\[b_e = \frac{\mathrm{d} \ln (a^3 \bar n_g)}{\mathrm{d} \ln a} \qquad \quad \mathcal Q = -\frac{\mathrm{d} \ln \bar n_g( > L_\text{min},z) }{\mathrm{d} \ln L_\text{min}}\,.\\]
+\\[b_e = \frac{\mathrm{d} \ln (a^3 \bar n_g)}{\mathrm{d} \ln a}\,, \qquad \quad \mathcal Q = -\frac{\mathrm{d} \ln \bar n_g( > L_\text{min},z) }{\mathrm{d} \ln L_\text{min}}\,.\\]
 Here, we see that $$L_\text{min}$$ is the limiting luminosity of a magnitude-limited survey. Lastly, we revisit the $$\mathcal I$$ expressions, which are given as
 {% raw %}
 $$
