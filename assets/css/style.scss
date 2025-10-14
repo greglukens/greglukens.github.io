@@ -373,12 +373,19 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 .max-800 img { max-width: 800px; }
 
 /* Lightbox: rounded corners + click-to-zoom */
+/* Lightbox image states */
 .lightbox-img {
-  border-radius: 10px;          /* slight rounding */
-  transform: scale(.96);
+  border-radius: 10px;
+  transform: scale(.96);                /* starting scale before open */
   transition: transform .18s ease;
-  cursor: zoom-in;              /* hint */
+  transform-origin: center center;      /* smoother zoom */
+  cursor: zoom-in;
 }
+.is-open .lightbox-img { transform: scale(1); }          /* open (no zoom) */
+.is-open.is-zoomed .lightbox-img { transform: scale(1.75); cursor: zoom-out; } /* zoomed */
+.lightbox-wrap { overflow: hidden; }
+.is-open.is-zoomed .lightbox-wrap { overflow: auto; }     /* allow pan when zoomed */
+
 
 .is-open .lightbox-img { transform: scale(1); }
 
