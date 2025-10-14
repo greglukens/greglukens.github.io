@@ -49,7 +49,7 @@ F_\ell(k,r)\; &=\;
 &\quad
 - \underbrace{2(1-\mathcal{Q})\, \mathcal{I}_{\mathrm{TD}}(k,r)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{time-delay}}
 - \underbrace{2(1-\mathcal{Q})\, \mathcal{I}_\kappa(k,r)\vphantom{\dfrac{j_\ell(kr)}{k^2}}}_{\text{lensing}}
-- \underbrace{ 3 \left[b_g(z) - 1 \right] f_\text{NL} \frac{\Omega_{m,0}\,H_0^2 \delta_c}{D(z)}  \frac{j_\ell(kr)}{k^2 T(k)}}_{\text{primordial non-Gaussianity}}\,,
++ \underbrace{ 3 \left[b_g(z) - 1 \right] f_\text{NL} \frac{\Omega_{m,0}\,H_0^2 \delta_c}{D(z)}  \frac{j_\ell(kr)}{k^2 T(k)}}_{\text{primordial non-Gaussianity}}\,,
 \end{aligned}
 $$
 {% endraw %}
