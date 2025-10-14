@@ -258,4 +258,38 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 .hero-overlay { z-index: 0; pointer-events: none; }
 .hero-inner   { z-index: 1; }
 
+/* --- Lightbox --- */
+.lightbox-backdrop {
+  position: fixed; inset: 0; z-index: 9999;
+  display: none; opacity: 0;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(2px);
+  transition: opacity .18s ease;
+}
+.lightbox-backdrop.is-open { display: block; opacity: 1; }
+
+.lightbox-wrap {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  padding: 4vmin;
+}
+
+.lightbox-img {
+  max-width: 96vw; max-height: 92vh;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.6);
+  transform: scale(.96);
+  transition: transform .18s ease;
+}
+.is-open .lightbox-img { transform: scale(1); }
+
+.lightbox-caption {
+  margin-top: .6rem;
+  color: #eef3ff; opacity: .9; text-align: center;
+  font-size: .95rem;
+}
+
+/* Make any “clickable for lightbox” image show a hint cursor */
+.lb, .lightbox img { cursor: zoom-in; }
+
 
