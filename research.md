@@ -15,9 +15,10 @@ From observations of the cosmic microwave background (CMB), we know that these p
 \\[\Phi(\boldsymbol x) = \Phi_G(\boldsymbol x) + f_{\mathrm{NL}} \left[\Phi_G^2(\boldsymbol x) - \left<\Phi_G \right>^2 \right] + \ldots \\]
 Therefore, statistically significant measurements of this \\(f_{\mathrm{NL}}\\) term could act as a "smoking-gun" signal for inflation and help distinguish between different models of inflation.
 
-Measurements of primordial non-Gaussianity have not reached statistical significance to date. The most accurate measurement from the CMB comes from the *Planck* satellite, which obtained \((f_{\mathrm{NL}} = -0.9 \pm 5.1 \)) from the temperature statistics of the background. Clearly, there is room for improvement.
+Measurements of primordial non-Gaussianity have not reached statistical significance to date. The most accurate measurement from the CMB comes from the *Planck* satellite, which obtained \\( f_{\mathrm{NL}} = -0.9 \pm 5.1 \\) from the temperature statistics of the background. Clearly, there is room for improvement.
 
-Moving away from the CMB, one can utilize observations of large-scale structure 
+Moving away from the CMB, one can utilize observations of large-scale structure to constrain primordial non-Gaussianity. Typically, galaxies are used to trace the underlying matter distribution (we cannot see dark matter, unfortunately). These two fields are related via
+\\[\delta_m(\boldsymbol x) = \frac{\rho_m(\boldsymbol x) - \bar \rho_m}{\bar \rho_m} \qquad \delta_g(\boldsymbol x) = \frac{n_g(\boldsymbol x) - \bar n_g}{\bar n_g} \qquad \delta_g(\boldsymbol x) = b_1 \delta_m(\boldsymbol x) + \ldots \\]
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
 
