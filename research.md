@@ -93,6 +93,10 @@ for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic e
   <figcaption><em>Each component of the full relativistic angular power spectrum at the quadrupole moment. Here, "Velocity" is the Doppler term, and "PNG" stands for primordial non-Gaussianity. The relative order of magnitude of each term is also included in each panel.</em></figcaption>
 </figure>
 
+We applied this new algorithm to make a forecast for SPHEREx; this paper will be published very soon (look for Lukens & Jeong, 2025/2026). 
+
+
+
 
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
