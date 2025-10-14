@@ -50,14 +50,15 @@ F_\ell(k,r)\; &=\;
 $$
 {% endraw %}
 is what we call the redshift-space kernel; you can think of it as the SFB version of the observed relativistic density contrast, $$\delta_g$$. Here, $$a$$ is the scale factor, $$H$$ is the Hubble parameter, $$f$$ is the linear growth rate, $$r$$ is the comoving distance, and $$'$$ denotes derivative by $$kr$$. Lastly, the relativistic coefficients $$\mathcal A$$ and $$\mathcal B$$ are given as
+{% raw %}
 $$
 \begin{aligned}
-  \mathcal A \,&= \,\frac{3}{2}\Omega_m \left[\frac{\mathcal B}{f}\left(1 - \frac{2f}{3\Omega_m} \right) + 2(1-\mathcal Q) \left(1+ \frac{2f}{3\Omega_m} \right) - \frac{4}{3}\frac{(1-\mathcal Q)}{aHr}\frac{f}{\Omega_m} \right]\\
-  \mathcal B \,&= \,f(b_e + \mathcal C -1) \\
+  \mathcal A \,&= \,\frac{3}{2}\Omega_m \left[\frac{\mathcal B}{f}\left(1 - \frac{2f}{3\Omega_m} \right) + 2(1-\mathcal Q) \left(1+ \frac{2f}{3\Omega_m} \right) - \frac{4}{3}\frac{(1-\mathcal Q)}{aHr}\frac{f}{\Omega_m} \right]\\[4pt]
+  \mathcal B \,&= \,f(b_e + \mathcal C -1) \\[4pt]
   \mathcal C \,&= -\frac{d\ln H}{d\ln a} - \frac{2}{aHr}(1-\mathcal Q) - 2\mathcal Q
 \end{aligned}
 $$
-
+{% endraw %}
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
 
