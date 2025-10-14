@@ -25,7 +25,16 @@ Specifically, primordial non-Gaussanity imposes a scale-dependent bias on galaxi
 \\[\delta_g(\boldsymbol k, z) = \left\\{ b_1(z) + 3\left[ b_1(z) - 1 \right] f_\mathrm{NL} \frac{\Omega_{m,0} H_0^2 \delta_c}{k^2 T(k) D(z)} \right\\} \delta_m(\boldsymbol k, z) \\]
 where $$k$$ is the Fourier wavenumber (you can think of it as inversely proportional to separation or scale), $$T(k)$$ is the matter transfer function, $$\Omega_{m,0}$$ is the matter density parameter at present, $$D(z)$$ is the linear growth factor, $H_0$ is the Hubble paramter at present, and $$\delta_c \approx 1.686$$ is the critical density threshold for spherical collapse. The important takeaway here is that the signal from primordial non-Gaussianity scales as \\(k^{-2} \\), which means it will dominate at *large scales*. 
 
-Due to this signal being prevalent at large scales (i.e., approaching a gigaparsec), new galaxy surveys have aimed to observe galaxies across unprecedented amounts of survey volume in hopes of constraining primordial non-Gaussianity to high precision. One such survey, [SPHEREx](https://science.nasa.gov/mission/spherex/), which just launched in early 2025, has a stated goal of $$\mathcal O(1)$$ precision on $$f_\mathrm{NL}$$. However, in order to achieve this, it will have to  
+Due to this signal being prevalent at large scales (i.e., approaching a gigaparsec), new galaxy surveys have aimed to observe galaxies across unprecedented amounts of survey volume in hopes of constraining primordial non-Gaussianity to high precision. One such survey, [SPHEREx](https://science.nasa.gov/mission/spherex/), which just launched in early 2025, has a stated goal of $$\mathcal O(1)$$ precision on $$f_\mathrm{NL}$$. However, in order to achieve this, it will have to account for some significant observational challenges.
+
+- **Problem 1**: You need a large survey volume to constrain $$f_\mathrm{NL}$$ to statistical significant levels.
+  - *Solution*: Observe galaxies across the full sky and to redshifts deep enough to measure galaxy pair separations greater than 1 Gpc.
+- **Problem 2**: On the full sky, you need to properly handle redshift-space distortions (i.e., the plane-parallel approximation fails).
+  - *Solution*: Redshift-space distoritions arise from the degenerate combination of the redshift from the expansion of the universe (the one you want to measure) and the Doppler shift from the peculiar velocity of galaxies. The latter is directly coupled to the underlying matter field, so you cannot ignore it. Typically, it is modeled in Fourier space, which relies on the plane-wave basis ($$e^{i\boldsymbol k \cdot \boldsymbol x}$$) of the Fourier transform, which works when your survey covers a small fraction of the sky; you can reasonably approximate the line-of-sight direction to every galaxy as the same (i.e., the plane-parallel approximation). This basis and flat-sky assumption breaks down in the full sky regime; you must move to the spherical Fourier-Bessel (SFB) basis, which uses spherical Bessel functions, $$j_\ell(kr)$$, and spherical harmonics, $$Y_\ell(\hat {\boldsymbol n} )$$, to parameterize your survey volume.
+- **Problem 3**:   
+
+
+
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
 
