@@ -13,9 +13,11 @@ The modern understanding of physical cosmology incorporates an inflationary epoc
 
 From observations of the cosmic microwave background (CMB), we know that these primordial fluctuations are *nearly* Gaussian, but even the smallest deviations from Gaussianity can have important implications. Therefore, the deviation from Gaussianity of the large-scale gravitational potential is typically expanded via
 \\[\Phi(\boldsymbol x) = \Phi_G(\boldsymbol x) + f_{\mathrm{NL}} \left[\Phi_G^2(\boldsymbol x) - \left<\Phi_G \right>^2 \right] + \ldots \\]
-In other words, statistically significant measurements of this \\(f_{\mathrm{NL}}\\) term could act as a ``smoking-gun" signal for inflation and help distinguish between different models of inflation.
+Therefore, statistically significant measurements of this \\(f_{\mathrm{NL}}\\) term could act as a "smoking-gun" signal for inflation and help distinguish between different models of inflation.
 
+Measurements of primordial non-Gaussianity have not reached statistical significance to date. The most accurate measurement from the CMB comes from the *Planck* satellite, which obtained \((f_{\mathrm{NL}} = -0.9 \pm 5.1 \)) from the temperature statistics of the background. Clearly, there is room for improvement.
 
+Moving away from the CMB, one can utilize observations of large-scale structure 
 - \\(C_\ell(r,r')\\) with 2-FAST extensions and SFB power spectra.
 - SPHEREx forecasts for \\(f_{\mathrm{NL}}\\), lensing/time-delay terms, and cross-correlations with GW sources.
 
