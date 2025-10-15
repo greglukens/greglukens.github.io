@@ -96,13 +96,13 @@ In an effort to streamline this calculation, one of my projects has been to buil
 for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic expression requires $$j,j' = 1$$ and integration of $$w_{\ell,jj'}$$ over the line-of-sight. Therefore, we have created [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which is the full relativistic extension/add-on of the 2-FAST algorithm.
 
 
-    </div>
+  </div>
   </details>
 
   <!-- leave a blank line above this figure -->
   <figure class="fig shadow-soft lightbox">
     <img src="{{ '/assets/img/cl_ell2_grid.png' | relative_url }}" alt="cl_mosaic" data-caption="Cl_ell2">
-    <figcaption><em>Each component of the full relativistic angular power spectrum at the quadrupole moment…</em></figcaption>
+    <figcaption><em>Each component of the full relativistic angular power spectrum at the quadrupole moment. Here, "Velocity" represents the Doppler term that arises in the Newtonian and relativistic treatments, and "PNG" stands for primordial non-Gaussianity.</em></figcaption>
   </figure>
 
   <p>We applied this new algorithm to make a forecast for SPHEREx; this paper will be published very soon (look for
