@@ -15,32 +15,36 @@
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true,
       processEnvironments: true,
-      packages: { '[+]': ['ams'] } 
+      packages: { '[+]': ['ams'] }
     },
-    options: {
-      skipHtmlTags: ['script','noscript','style','textarea','pre','code']
-    }
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
   };
   </script>
   <script async id="MathJax-script"
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 </head>
+
 <body class="subpage">
   <!-- Full-screen background -->
   <div class="bg-fixed" style="--bg: url('{{ page.background | default: "/assets/img/lss.jpg" | relative_url }}');"></div>
   <div class="bg-dim"></div>
 
-  <!-- Centered pop-out card -->
+  <!-- Centered content -->
   <main class="sheet" role="main">
+    {% if page.title %}
+    <!-- Page hero title ABOVE the card -->
+    <header class="page-hero-wrap" aria-labelledby="page-hero">
+      <h1 id="page-hero" class="page-hero">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="page-hero-sub">{{ page.subtitle }}</p>{% endif %}
+    </header>
+    {% endif %}
+
+    <!-- Pop-out card with the body content (no title inside) -->
     <article class="glass-card pop-in">
-      {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
       {{ content }}
     </article>
   </main>
 
   <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
-  <!-- Optional: tiny footer (or remove entirely) -->
-  <!-- <footer class="site-footer"><p>{{ site.title }}</p></footer> -->
 </body>
 </html>
