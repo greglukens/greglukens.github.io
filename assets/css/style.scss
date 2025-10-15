@@ -543,4 +543,27 @@ details.accordion summary + .content{ display:none; }
 details.accordion[open] summary + .content{ display:block; padding: 0 1rem 1rem; }
 
 
+/* safer: don't touch borders inside math containers */
+section.project :where(details, summary, .content, p, ul, li, code, pre):not(mjx-container):not(.katex) {
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+
+/* Restore fraction bars (MathJax v3 – CHTML) */
+mjx-mfrac mjx-line {
+  border-top: .06em solid currentColor !important;
+}
+
+/* If your site uses KaTeX anywhere */
+.katex .mfrac .frac-line {
+  border-top: 1px solid currentColor !important;
+}
+
+/* (Rare) SVG output fallback */
+mjx-container svg mjx-line {
+  stroke: currentColor !important;
+  stroke-width: 1px !important;
+}
+
+
 
