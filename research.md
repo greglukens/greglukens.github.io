@@ -10,7 +10,7 @@ permalink: /research/
 <section class="project">
   <h3 class="project-title">Primordial Non-Gaussianity (SPHEREx)</h3>
 
-  <details class="accordion" open>
+  <details class="accordion">
     <summary><span>Read the full explanation</span></summary>
     <div class="content" markdown="1">
 
