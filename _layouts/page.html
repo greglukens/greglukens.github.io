@@ -7,44 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   {% seo %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=hero1">
   <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      packages: { '[+]': ['ams'] }
-    },
-    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
-  };
+    window.MathJax = {
+      tex:{ inlineMath:[['$','$'],['\\(','\\)']], displayMath:[['$$','$$'],['\\[','\\]']],
+            processEscapes:true, processEnvironments:true, packages:{'[+]':['ams']} },
+      options:{ skipHtmlTags:['script','noscript','style','textarea','pre','code'] }
+    };
   </script>
   <script async id="MathJax-script"
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body class="subpage">
-  <!-- Full-screen background -->
+  <!-- Background -->
   <div class="bg-fixed" style="--bg: url('{{ page.background | default: "/assets/img/lss.jpg" | relative_url }}');"></div>
   <div class="bg-dim"></div>
 
-  <!-- Centered content -->
   <main class="sheet" role="main">
     {% if page.title %}
-    <!-- Page hero title ABOVE the card -->
-    <header class="page-hero-wrap" aria-labelledby="page-hero">
-      <h1 id="page-hero" class="page-hero">{{ page.title }}</h1>
-      {% if page.subtitle %}<p class="page-hero-sub">{{ page.subtitle }}</p>{% endif %}
-    </header>
+      <!-- HERO TITLE ABOVE THE CARD -->
+      <header class="page-hero-wrap" aria-labelledby="page-hero">
+        <h1 id="page-hero" class="page-hero">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="page-hero-sub">{{ page.subtitle }}</p>{% endif %}
+      </header>
     {% endif %}
 
-    <!-- Pop-out card with the body content (no title inside) -->
-    <article class="glass-card pop-in">
-      {{ content }}
-    </article>
-  </main>
-
-  <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
-</body>
-</html>
+    <!-- Content card (no title
