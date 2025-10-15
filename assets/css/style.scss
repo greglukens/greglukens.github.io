@@ -570,6 +570,18 @@ mjx-container svg mjx-line {
   stroke-width: 1px !important;
 }
 
+/* 1) Make the accordion slightly wider than the text column */
+.research-block details.accordion{
+  width: calc(100% + 24px);   /* widen by 12px on each side */
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+/* 2) Add a bit of space under the summary when opened */
+.research-block details.accordion[open] summary + .content{
+  padding-top: .6rem;          /* tweak to taste */
+}
+
 
 
 
