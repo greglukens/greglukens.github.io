@@ -759,3 +759,44 @@ h1.page-hero{
 .bg-dim  { z-index: 1; }
 .sheet   { z-index: 2; }
 
+/* --- Stack hero above a visible card --- */
+.page-stack{
+  position: relative;
+  z-index: 2;                 /* above bg layers */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center hero + card */
+  gap: 1.25rem;               /* space between them */
+  min-height: 100svh;
+  padding: clamp(2rem, 4vw, 4rem) 1rem;
+}
+
+/* Hero title (thin, large) */
+.page-hero{
+  margin: 0;
+  font-weight: 300;
+  font-size: clamp(2.6rem, 6.5vw, 3.8rem);
+  line-height: 1.05;
+  color: #fff;
+  text-shadow: 0 3px 16px rgba(0,0,0,.45);
+  background: transparent !important;
+}
+
+/* Make sure the card is visible and sized */
+.glass-card{
+  display: block !important;
+  width: min(var(--content-width, 1000px), 92vw);
+  max-width: 100%;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 14px;
+  background: rgba(12,12,16,0.55);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #f2f3f5;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+}
+
+/* (TEMP) debug outline—remove once you see the card */
+.glass-card{ outline: 2px solid rgba(0,255,165,.5); }
+
+
