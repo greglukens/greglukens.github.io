@@ -7,9 +7,14 @@ permalink: /research/
 \\(\,\\)
 ## Current Projects
 
-#### Full general relativistic galaxy angular power spectrum
+<section class="project">
+  <h3 class="project-title">Primordial Non-Gaussianity (SPHEREx)</h3>
 
-The modern understanding of physical cosmology incorporates an inflationary epoch just after the Big Bang, in which the universe expanded by many orders of magnitude. During this period of inflation, quantum fluctuations grew in size to macroscopic scales and became the seeds for all structure in the universe. The exact statistical composition of these so-called *primordial density perturbations* is an open question in physical cosmology, the answer to which can provide significant insight into the exact nature of inflation. 
+  <details class="accordion" open>
+    <summary><span>Read the full explanation</span></summary>
+    <div class="content" markdown="1">
+
+The modern understanding of physical cosmology incorporates an inflationary epoch just after the Big Bang, in which the universe expanded by many orders of magnitude. During this period of inflation, quantum fluctuations grew in size to macroscopic scales and became the seeds for all structure in the universe. The exact statistical composition of these so-called *primordial density perturbations* is an open question in physical cosmology, the answer of which can provide significant insight into the exact nature of inflation. 
 
 From observations of the cosmic microwave background (CMB), we know that these primordial fluctuations are *nearly* Gaussian, but even the smallest deviations from Gaussianity can have important implications. Therefore, the deviation from Gaussianity of the large-scale gravitational potential is typically expanded via
 \\[\Phi(\boldsymbol x) = \Phi_G(\boldsymbol x) + f_{\mathrm{NL}} \left[\Phi_G^2(\boldsymbol x) - \left<\Phi_G \right>^2 \right] + \ldots \\]
@@ -87,6 +92,10 @@ where $$P(k) = \left<\delta_m(k) \delta_m(k')\right>$$ is the matter power spect
 In an effort to streamline this calculation, one of my projects has been to build upon the already-efficient [2-FAST](https://github.com/hsgg/TwoFAST.jl) (*2*-point function from *F*ast and *A*ccurate *S*pherical bessel *T*ransform), which swiftly computes integrals of the form
 \\[w_{\ell,jj'}^p(r,r') = \frac{2}{\pi}\int dk\,k^{2+p} P(k) j_\ell^{(j)}(kr) j_\ell^{(j')}(kr')\,, \\]
 for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic expression requires $$j,j' = 1$$ and integration of $$w_{\ell,jj'}$$ over the line-of-sight. Therefore, we have created [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which is the full relativistic extension/add-on of the 2-FAST algorithm.
+
+    </div>
+  </details>
+</section>
 
 <figure class="fig shadow-soft lightbox">
   <img src="{{ '/assets/img/cl_ell2_grid.png' | relative_url }}" alt="cl_mosaic" data-caption="Cl_ell2">
