@@ -8,7 +8,7 @@ permalink: /research/
 ## Current Projects
 
 <div class="research-block">
-  <h3 class="project-title">Primordial Non-Gaussianity (SPHEREx)</h3>
+  <h3 class="project-title">Primordial non-Gaussianity</h3>
   <p class="project-tagline" markdown="1"> 
     The modern understanding of physical cosmology incorporates an inflationary epoch just after the Big Bang, in which the universe expanded by many orders of magnitude. During this period of inflation, quantum fluctuations grew in size to macroscopic scales and became the seeds for all structure in the universe. The exact statistical composition of these so-called *primordial density perturbations* is an open question in physical cosmology, the answer of which can provide significant insight into the exact nature of inflation. </p>
 
