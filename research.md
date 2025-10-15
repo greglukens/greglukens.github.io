@@ -99,15 +99,15 @@ for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic e
     </div>
   </details>
 
+  <!-- leave a blank line above this figure -->
   <figure class="fig shadow-soft lightbox">
     <img src="{{ '/assets/img/cl_ell2_grid.png' | relative_url }}" alt="cl_mosaic" data-caption="Cl_ell2">
     <figcaption><em>Each component of the full relativistic angular power spectrum at the quadrupole moment…</em></figcaption>
   </figure>
 
   <p>We applied this new algorithm to make a forecast for SPHEREx; this paper will be published very soon (look for
- <strong>Lukens &amp; Jeong, 2025/2026</strong>).</p>
+  <strong>Lukens &amp; Jeong, 2025/2026</strong>).</p>
 </div>
-
 
 
 
