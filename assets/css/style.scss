@@ -520,11 +520,15 @@ details.accordion[open] summary + .content {
 .research-block{ align-self: center; }
 
 /* Keep transparency (no white cards) */
-.research-block, .research-block *{
-  background: transparent !important;
+/* Only strip borders from our own chrome */
+.research-block,
+.research-block details.accordion,
+.research-block details.accordion *:not(mjx-container):not(.katex) {
   box-shadow: none !important;
-  border: 0;
+  background: transparent !important;
 }
+
+
 
 /* Minimal accordion chrome */
 details.accordion{
