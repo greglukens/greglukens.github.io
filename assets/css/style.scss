@@ -624,6 +624,40 @@ mjx-container svg mjx-line {
 /* If an old .page-title rule exists inside .glass-card, hide it (we removed it anyway) */
 .glass-card .page-title{ display: none; }
 
+/* Tighter chrome, comfy gutters, centered summary */
+.research-block details.accordion{
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  overflow: hidden;                       /* rounds inner corners */
+}
+
+/* Center the summary text and give it horizontal padding */
+.research-block details.accordion summary{
+  text-align: center;                     /* center "Click for more details" */
+  padding: .9rem 1.25rem;                 /* wider side padding */
+  font-weight: 700;
+  list-style: none;
+}
+.research-block details.accordion summary::-webkit-details-marker{ display:none; }
+
+/* Content spacing: real gutters + a bit of air at the top */
+.research-block details.accordion summary + .content{ display:none; }
+.research-block details.accordion[open] summary + .content{
+  display: block;
+  padding: .8rem 1.25rem 1.25rem;         /* top, sides, bottom */
+}
+
+/* Ensure the first element (p or math) doesn’t stick to the top edge */
+.research-block details.accordion[open] .content > :first-child{
+  margin-top: .4rem;                      /* add space above 1st paragraph/equation */
+}
+
+
+/* Mobile: slightly smaller gutters so it doesn’t feel cramped */
+@media (max-width: 560px){
+  .research-block details.accordion summary{ padding: .8rem 1rem; }
+  .research-block details.accordion[open] summary + .content{ padding: .7rem 1rem 1rem; }
+}
 
 
 
