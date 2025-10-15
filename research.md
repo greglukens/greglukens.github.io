@@ -4,9 +4,6 @@ title: Research
 permalink: /research/
 ---
 
-\\(\,\\)
-## Current Projects
-
 <div class="research-block">
   <h3 class="project-title">Primordial non-Gaussianity</h3>
   <p class="project-tagline" markdown="1"> 
