@@ -10,9 +10,9 @@ permalink: /research/
 <div class="research-block">
   <h3 class="project-title">Primordial Non-Gaussianity (SPHEREx)</h3>
   <p class="project-tagline" markdown="1"> 
-    The modern understanding of physical cosmology incorporates an inflationary epoch just after the Big Bang, in which the universe expanded by many orders of magnitude. During this period of inflation, quantum fluctuations grew in size to macroscopic scales and became the seeds for all structure in the universe. The exact statistical composition of these so-called *primordial density perturbations* is an open question in physical cosmology, the answer of which can provide significant insight into the exact nature of inflation. 
-  
-  In an effort to address this question, we have adapted a code, [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which efficiently computes the fully general relativistic angular galaxy power spectrum; this is a statistical tool that will be used to accurately constraining this primordial non-Gaussianity from observations of galaxies and large-scale structure. In particular, galaxy surveys, such as [**SPHEREx**](https://science.nasa.gov/mission/spherex/), will likely make statistically significant detections of this non-Gaussianity in the near future, so such a tool is especially relevant.
+    The modern understanding of physical cosmology incorporates an inflationary epoch just after the Big Bang, in which the universe expanded by many orders of magnitude. During this period of inflation, quantum fluctuations grew in size to macroscopic scales and became the seeds for all structure in the universe. The exact statistical composition of these so-called *primordial density perturbations* is an open question in physical cosmology, the answer of which can provide significant insight into the exact nature of inflation. </p>
+
+  <p markdown="1"> In an effort to address this question, we have adapted a code, [**PowerFull**](https://github.com/greglukens/PowerFull.jl), which efficiently computes the fully general relativistic angular galaxy power spectrum; this is a statistical tool that will be used to accurately constraining this primordial non-Gaussianity from observations of galaxies and large-scale structure. In particular, galaxy surveys, such as [**SPHEREx**](https://science.nasa.gov/mission/spherex/), will likely make statistically significant detections of this non-Gaussianity in the near future, so such a tool is especially relevant.
   </p>
 
   <details class="accordion">
