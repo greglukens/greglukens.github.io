@@ -813,5 +813,21 @@ h1.page-hero{
   box-shadow: none;
 }
 
+/* center a narrower column inside the accordion content */
+.research-block details.accordion[open] .content{
+  max-width: 72ch;           /* tweak: 68–76ch is a good range */
+  margin: .6rem auto 1.1rem; /* top / centered / bottom */
+  padding: 0;                /* remove extra side padding */
+}
+
+/* tighten paragraph rhythm inside the accordion */
+.research-block details.accordion .content > p{
+  margin: .65rem 0;          /* reduce default p spacing */
+}
+
+/* math blocks inside accordion get matching spacing */
+.research-block details.accordion mjx-container{
+  margin: .6rem 0;
+}
 
 
