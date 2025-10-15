@@ -461,6 +461,34 @@ details.accordion summary:hover{ filter: brightness(1.05); }
 details.accordion summary .chev{ width:20px;height:20px;transition:transform .18s ease; }
 details.accordion[open] summary .chev{ transform: rotate(180deg); }
 
+/* ——— Nuke the white card for this block ——— */
+section.project,
+section.project :where(details, summary, .content, p, ul, li, code, pre) {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: rgba(255,255,255,0.08) !important; /* keep subtle border if you had one */
+}
+
+/* if your theme uses pseudo-elements for the card bg */
+section.project::before,
+section.project::after,
+section.project *::before,
+section.project *::after {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* optional: remove any leftover card rounding if it came from the theme */
+section.project {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* keep the accordion content spacing only when open */
+details.accordion[open] summary + .content {
+  padding: 0 0 1rem 0 !important;
+}
 
 
 
