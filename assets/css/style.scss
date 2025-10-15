@@ -417,62 +417,50 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
   margin: 1.25rem 0;
 }
 
-.project-title {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.15rem;
-  line-height: 1.2;
+/* Make the accordion blend with the page (no white card) */
+.project{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;                     /* remove inner padding so width matches column */
+  margin: 0 0 1.25rem 0;          /* keep a little spacing below */
 }
 
-.project-tagline {
-  margin: 0 0 0.75rem 0;
-  color: #555;
+/* Make it the same width as your content column / images */
+.project, .project > * {
+  max-width: 100%;                /* fill the parent column */
+}
+.project-title{ margin: 0 0 .5rem 0; }
+
+/* Accordion chrome, minimal + on-brand text color */
+details.accordion{
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08);   /* subtle line; tweak or remove */
+  background: transparent;                   /* inherit page bg */
 }
 
-/* Accordion basic */
-details.accordion {
-  border-top: var(--border);
-}
-details.accordion:first-of-type {
-  border-top: none;
-}
-
-details.accordion summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Summary row */
+details.accordion summary{
+  padding: .9rem 1rem;
   cursor: pointer;
-  list-style: none;               /* hide default marker */
-  padding: 0.75rem 0;
-  font-weight: 600;
+  list-style: none;
+  font-weight: 700;
+  color: inherit;                 /* use your page’s text color */
+}
+details.accordion summary::-webkit-details-marker{ display:none; }
+
+/* Content hidden until opened (belt-and-suspenders) */
+details.accordion summary + .content{ display:none; }
+details.accordion[open] summary + .content{
+  display:block;
+  padding: 0 1rem 1rem 1rem;
 }
 
-details.accordion summary::-webkit-details-marker { display: none; } /* Safari */
+/* Optional: subtle hover + rotating chevron if you kept the SVG */
+details.accordion summary:hover{ filter: brightness(1.05); }
+details.accordion summary .chev{ width:20px;height:20px;transition:transform .18s ease; }
+details.accordion[open] summary .chev{ transform: rotate(180deg); }
 
-details.accordion summary .chev {
-  width: 20px; height: 20px; flex: 0 0 20px;
-  transition: transform 180ms ease;
-  opacity: 0.8;
-}
-details.accordion[open] summary .chev {
-  transform: rotate(180deg);
-}
-
-/* Content area */
-details.accordion .content {
-  padding: 0 0 0.9rem 0;
-  color: #222;
-}
-details.accordion .content p {
-  margin: 0.25rem 0 0 0;
-}
-details.accordion .content ul {
-  margin: 0.25rem 0 0 1.1rem;
-}
-
-/* Optional: subtle hover line */
-details.accordion summary:hover {
-  color: var(--accent);
-}
 
 
 
