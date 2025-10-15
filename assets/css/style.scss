@@ -660,4 +660,29 @@ mjx-container svg mjx-line {
 }
 
 
+/* --- Page hero above card --- */
+.page-hero-wrap{
+  width: min(100%, var(--content-width, 1000px));
+  margin: 0 auto 1.0rem;
+  padding: 0 12px;
+  position: relative;
+  z-index: 2;                /* keep it above background layers */
+}
+.page-hero{
+  margin: 0;
+  font-weight: 300;          /* thinner */
+  font-size: clamp(2.6rem, 6.5vw, 3.8rem);  /* bigger */
+  line-height: 1.05;
+  letter-spacing: .01em;
+  color: #fff;
+  text-shadow: 0 3px 16px rgba(0,0,0,.45);
+}
+.page-hero-sub{
+  margin: .35rem 0 0;
+  color: #eef3ff;
+  opacity: .95;
+}
+
+/* Add a bit more air at top of the card so hero doesn't crowd it */
+.glass-card { margin-top: .25rem; }
 
