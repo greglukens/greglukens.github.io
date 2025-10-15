@@ -490,5 +490,53 @@ details.accordion[open] summary + .content {
   padding: 0 0 1rem 0 !important;
 }
 
+/* Choose one place to control content width */
+:root { --content-width: 860px; } /* tweak to your image/column width */
+
+/* Make the whole block share the same width and be centered */
+.research-block{
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;                 /* centers it */
+}
+
+/* Ensure children fill that width */
+.research-block details.accordion,
+.research-block .fig,
+.research-block .project-title,
+.research-block .project-tagline { 
+  max-width: 100%;
+}
+
+/* Images should fill the column and be centered */
+.research-block .fig img{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* If a parent uses flex, keep this block centered */
+.research-block{ align-self: center; }
+
+/* Keep transparency (no white cards) */
+.research-block, .research-block *{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0;
+}
+
+/* Minimal accordion chrome */
+details.accordion{
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+}
+details.accordion summary{
+  list-style: none; padding: .8rem 1rem; font-weight: 600; cursor: pointer;
+}
+details.accordion summary::-webkit-details-marker{ display:none; }
+details.accordion summary + .content{ display:none; }
+details.accordion[open] summary + .content{ display:block; padding: 0 1rem 1rem; }
+
 
 
