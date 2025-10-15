@@ -686,3 +686,25 @@ mjx-container svg mjx-line {
 /* Add a bit more air at top of the card so hero doesn't crowd it */
 .glass-card { margin-top: .25rem; }
 
+/* Make the page stack: hero on top, card below */
+.sheet{
+  display: flex;                 /* was: grid */
+  flex-direction: column;
+  align-items: center;           /* center horizontally */
+  gap: 1rem;                     /* space between hero and card */
+  min-height: 100svh;
+  padding: clamp(2rem, 4vw, 4rem) 1rem;
+}
+
+/* Ensure the hero has no colored background */
+.page-hero{ 
+  background: transparent !important;
+  padding: 0 !important;
+  display: inline-block;         /* size to text */
+}
+
+/* Give the card a little air below the title if needed */
+.glass-card{ 
+  margin-top: 0;                 /* rely on .sheet gap instead */
+  width: min(1000px, 92vw);      /* optional: match hero width */
+}
