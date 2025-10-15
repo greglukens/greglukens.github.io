@@ -755,3 +755,7 @@ h1.page-hero{
   background: transparent;        /* content transparent is fine */
 }
 
+.bg-fixed{ z-index: 0; }
+.bg-dim  { z-index: 1; }
+.sheet   { z-index: 2; }
+
