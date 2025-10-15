@@ -796,7 +796,22 @@ h1.page-hero{
   backdrop-filter: blur(8px);
 }
 
-/* (TEMP) debug outline—remove once you see the card */
-.glass-card{ outline: 2px solid rgba(0,255,165,.5); }
+/* card border (subtle white) */
+.glass-card{
+  border: 1px solid rgba(255,255,255,.18) !important;
+}
+
+/* accordion border (slightly lighter) */
+.research-block details.accordion{
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 14px;
+  outline: none;
+}
+.research-block details.accordion:focus,
+.research-block details.accordion summary:focus{
+  outline: none;
+  box-shadow: none;
+}
+
 
 
