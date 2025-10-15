@@ -430,7 +430,12 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 .project, .project > * {
   max-width: 100%;                /* fill the parent column */
 }
-.project-title{ margin: 0 0 .5rem 0; }
+.project-title { 
+  font-size: 28px;    /* pick your size */
+  line-height: 1.15; 
+  margin: 0 0 .4rem;
+}
+
 
 /* Accordion chrome, minimal + on-brand text color */
 details.accordion{
@@ -564,6 +569,7 @@ mjx-container svg mjx-line {
   stroke: currentColor !important;
   stroke-width: 1px !important;
 }
+
 
 
 
