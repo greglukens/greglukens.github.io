@@ -402,6 +402,77 @@ u, .underline { text-decoration-color: rgba(255,255,255,0.95); }
 /* Optional: hide caption while zoomed for max space */
 .lightbox-backdrop.is-zoomed .lightbox-caption { display: none; }
 
+/* Card container */
+.project {
+  --radius: 14px;
+  --border: 1px solid rgba(0,0,0,0.08);
+  --shadow: 0 6px 16px rgba(0,0,0,0.06);
+  --bg: #fff;
+  --accent: #2b6cb0; /* tweak if you want */
+  background: var(--bg);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.project-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.project-tagline {
+  margin: 0 0 0.75rem 0;
+  color: #555;
+}
+
+/* Accordion basic */
+details.accordion {
+  border-top: var(--border);
+}
+details.accordion:first-of-type {
+  border-top: none;
+}
+
+details.accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;               /* hide default marker */
+  padding: 0.75rem 0;
+  font-weight: 600;
+}
+
+details.accordion summary::-webkit-details-marker { display: none; } /* Safari */
+
+details.accordion summary .chev {
+  width: 20px; height: 20px; flex: 0 0 20px;
+  transition: transform 180ms ease;
+  opacity: 0.8;
+}
+details.accordion[open] summary .chev {
+  transform: rotate(180deg);
+}
+
+/* Content area */
+details.accordion .content {
+  padding: 0 0 0.9rem 0;
+  color: #222;
+}
+details.accordion .content p {
+  margin: 0.25rem 0 0 0;
+}
+details.accordion .content ul {
+  margin: 0.25rem 0 0 1.1rem;
+}
+
+/* Optional: subtle hover line */
+details.accordion summary:hover {
+  color: var(--accent);
+}
 
 
 
