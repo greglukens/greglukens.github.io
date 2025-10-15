@@ -573,13 +573,13 @@ mjx-container svg mjx-line {
 /* 1) Make the accordion slightly wider than the text column */
 .research-block details.accordion{
   width: calc(100% + 24px);   /* widen by 12px on each side */
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: -14px;
+  margin-right: -14px;
 }
 
 /* 2) Add a bit of space under the summary when opened */
 .research-block details.accordion[open] summary + .content{
-  padding-top: .6rem;          /* tweak to taste */
+  padding-top: 1rem;          /* tweak to taste */
 }
 
 /* Big, thin page title above the glass card */
