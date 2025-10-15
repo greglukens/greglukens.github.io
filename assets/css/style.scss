@@ -598,6 +598,31 @@ mjx-container svg mjx-line {
 /* If your column is controlled via this var, keep it in sync */
 :root { --content-width: 1000px; } /* or keep your 900/920 etc. */
 
+/* Big, thin hero title above the glass card for all pages using page.html */
+.page-hero-wrap{
+  width: min(100%, var(--content-width, 1000px));
+  margin: 0 auto .9rem;
+  padding: 0 12px;
+}
+
+.page-hero{
+  font-weight: 300;                               /* thinner */
+  font-size: clamp(2.4rem, 6.2vw, 3.6rem);        /* larger, responsive */
+  line-height: 1.05;
+  letter-spacing: .01em;
+  color: #fff;
+  text-shadow: 0 3px 16px rgba(0,0,0,.45);
+  margin: 0;
+}
+
+.page-hero-sub{
+  margin: .3rem 0 0;
+  color: #eef3ff;
+  opacity: .95;
+}
+
+/* If an old .page-title rule exists inside .glass-card, hide it (we removed it anyway) */
+.glass-card .page-title{ display: none; }
 
 
 
