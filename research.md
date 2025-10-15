@@ -16,7 +16,7 @@ permalink: /research/
   </p>
 
   <details class="accordion">
-    <summary><span>More if interested</span></summary>
+    <summary><span>Click for more details</span></summary>
     <div class="content" markdown="1">
 
 From observations of the cosmic microwave background (CMB), we know that these primordial fluctuations are *nearly* Gaussian, but even the smallest deviations from Gaussianity can have important implications. Therefore, the deviation from Gaussianity of the large-scale gravitational potential is typically expanded via
