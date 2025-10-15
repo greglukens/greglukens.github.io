@@ -815,7 +815,7 @@ h1.page-hero{
 
 /* center a narrower column inside the accordion content */
 .research-block details.accordion[open] .content{
-  max-width: 90ch;           /* tweak: 68–76ch is a good range */
+  max-width: 100ch;           /* tweak: 68–76ch is a good range */
   margin: .6rem auto 1.1rem; /* top / centered / bottom */
   padding: 0;                /* remove extra side padding */
 }
