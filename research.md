@@ -108,7 +108,7 @@ for $$(j,j') = (0,0),\,(0,2),\,(2,0),\,(2,2)$$. However, the full relativistic e
 </div>
 
 <div class="research-block">
-  <h3 class="project-title">Higher-order relativistic galaxy clustering</h3>
+  <h3 class="project-title">General relativistic galaxy clustering</h3>
   <p class="project-tagline" markdown="1"> 
   </p>
 </div>
