@@ -582,6 +582,23 @@ mjx-container svg mjx-line {
   padding-top: .6rem;          /* tweak to taste */
 }
 
+/* Big, thin page title above the glass card */
+.page-hero{
+  width: min(100%, 1000px);      /* matches your content width */
+  margin: 0 auto .9rem;          /* centers it; space below */
+  padding: 0 12px;               /* a little side breathing room */
+  font-weight: 300;              /* thin */
+  font-size: clamp(2.4rem, 6.2vw, 3.6rem); /* responsive large */
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-shadow: 0 3px 16px rgba(0,0,0,.45);
+}
+
+/* If your column is controlled via this var, keep it in sync */
+:root { --content-width: 1000px; } /* or keep your 900/920 etc. */
+
+
 
 
 
